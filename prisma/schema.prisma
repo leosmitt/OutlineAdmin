@@ -6,7 +6,7 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "cloudflare"
   url      = env{("d1_databases1") , (d1_databases2)}
 }
 
