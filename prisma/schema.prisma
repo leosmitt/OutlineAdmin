@@ -7,7 +7,7 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = env("DATABASE_URL")
+  url      = env{("d1_databases1") , (d1_databases2)}
 }
 
 model User {
