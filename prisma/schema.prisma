@@ -5,10 +5,9 @@ generator client {
   provider = "prisma-client-js"
 }
 
-// prisma/schema.prisma
 datasource db {
-  provider = "mongodb"
-  url      = env("MONGODB_URI")
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
 }
 
 model User {
