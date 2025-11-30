@@ -1,0 +1,29 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+  "$schema": "./prisma/db.ts",
+  "name": "Outline Admin",
+  "main": "src/hooks.server.ts",
+  "compatibility_date": "2025-05-20",
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./.svelte-kit/cloudflare"
+  },
+  "observability": {
+    "enabled": true ,
+  },
+  /**
+   * D1 Database configuration
+   * https://developers.cloudflare.com/d1/reference/workers-api-reference/
+   */
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "sql_api_db",
+      "database_id": "15062f3c-2ad1-44e7-9bd3-83abb2e941bb",
+      "migrations_table": "d1_migrations",
+      "migrations_dir": "./migrations"
+    }
+  ]
